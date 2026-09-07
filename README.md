@@ -18,6 +18,24 @@ npm run build     # ra thư mục dist/
 npm run preview   # xem thử bản build
 ```
 
+## Deploy lên Vercel
+
+Project đã có sẵn `vercel.json`. Khi import repository vào Vercel, các thiết lập
+sẽ được nhận diện tự động:
+
+- Framework: `Vite`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install`
+
+Có thể deploy bằng Vercel CLI:
+
+```bash
+npm install -g vercel
+vercel
+vercel --prod
+```
+
 `vite.config.js` đặt `base: './'` và app dùng `HashRouter`, nên thư mục `dist/`
 chạy được ở mọi nơi: static host bất kỳ, subpath (GitHub Pages), hoặc mở thẳng
 `dist/index.html` bằng trình duyệt.
